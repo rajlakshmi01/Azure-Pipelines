@@ -1,0 +1,17 @@
+{
+	"name": "SQL script to retrieve data",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://datalakeb4jf7a6.dfs.core.windows.net/files/c3434b98-3e72-4e2b-945f-3447765d9365/part-00000-54b43212-350d-4595-8c8f-52f7dce66645-c000.snappy.parquet',\n        FORMAT = 'PARQUET'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
